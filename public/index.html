@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Improve your credit score with Australian Credit Solutions and secure better financial opportunities. Get credit repair expert help you can trust today!" />
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="%PUBLIC_URL%/front-asset/images/logo.webp" as="image">
+    <link rel="preload" href="%PUBLIC_URL%/front-asset/css/style.css" as="style">
+    
+    <!-- Critical CSS Inline -->
+    <style>
+        /* Critical above-the-fold styles */
+        body { 
+            margin: 0; 
+            font-family: 'Noto Sans', sans-serif; 
+            line-height: 1.6;
+        }
+        .header { 
+            background: #f8f9fa; 
+            padding: 10px 0; 
+        }
+        .banner_home { 
+            position: relative; 
+        }
+        .banner_img img { 
+            width: 100%; 
+            height: auto; 
+        }
+        .form_sec { 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }
+        .input_icons { 
+            position: relative; 
+        }
+        .input_icons input, 
+        .input_icons select { 
+            width: 100%; 
+            padding: 12px 40px 12px 12px; 
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+        }
+        .button_1 { 
+            background: #0668a5; 
+            color: white; 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        .wow { 
+            visibility: hidden; 
+        }
+        .fadeInUp { 
+            animation: fadeInUp 0.6s ease-out; 
+        }
+        @keyframes fadeInUp { 
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        }
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 18px;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Australian Credit Solutions - Credit Repair Services" />
+    <meta property="og:description" content="Improve your credit score with Australian Credit Solutions and secure better financial opportunities." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://landing-page-2-lake-seven.vercel.app" />
+    <meta property="og:image" content="%PUBLIC_URL%/front-asset/images/logo.webp" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Australian Credit Solutions" />
+    <meta name="twitter:description" content="Professional credit repair services in Australia" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Australian Credit Solutions",
+        "description": "Professional credit repair and credit score improvement services",
+        "url": "https://landing-page-2-lake-seven.vercel.app",
+        "logo": "https://landing-page-2-lake-seven.vercel.app/front-asset/images/logo.webp",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "1300-368-302",
+            "contactType": "customer service"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Melbourne",
+            "addressRegion": "VIC",
+            "addressCountry": "AU"
+        }
+    }
+    </script>
+    
+    <title>Australian Credit Solutions - Professional Credit Repair Services</title>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <!-- Loading fallback -->
+        <div class="loading-spinner">
+            <div>
+                <div style="margin-bottom: 10px;">Loading Australian Credit Solutions...</div>
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html> 
